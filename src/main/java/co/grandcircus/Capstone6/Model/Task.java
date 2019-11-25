@@ -65,7 +65,7 @@ public class Task
 		return completion;
 	}
 	
-	public void setisComplete(boolean completeIfTrue) {
+	public void setIsComplete(boolean completeIfTrue) {
 		this.completion = completeIfTrue;
 	}
 	
