@@ -17,12 +17,6 @@ public class LoginController {
 	@Autowired
 	UserRepo users;
 	
-	//Route from the index to the login page.
-	@RequestMapping("/")
-	public ModelAndView goToLogin() {
-		return new ModelAndView("login-content");
-	}
-	
 	//Either login succeeds--which takes us to display.jsp--or it fails, which boots us back to the login page.
 	@RequestMapping("/login/submit")
 	public ModelAndView attemptLogin(@RequestParam String email, @RequestParam String password) {
@@ -34,7 +28,6 @@ public class LoginController {
 		} else {
 			return new ModelAndView("login-content", "error", "Either the email could not be found, or the password did not match. Please try again or create a new user.");
 		}
-		
 	}
 	
 	// TODO. This is a decent first-run strategy for identifying the user who's trying to log in. And if the user is identified, we automatically know the user is authenticated. 

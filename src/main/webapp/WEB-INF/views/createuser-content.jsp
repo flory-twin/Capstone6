@@ -5,24 +5,15 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Login</title>
+		<title>Create a New User</title>
 		<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/sandstone/bootstrap.min.css" rel="stylesheet" integrity="sha384-G3Fme2BM4boCE9tHx9zHvcxaQoAkksPQa/8oyn1Dzqv7gdcXChereUsXGx6LtbqA" crossorigin="anonymous">
 	</head>
 	<body>
-		<h1>Please enter your email address and password below.</h1>
-		
-		<form id="loginForm" action="/login/submit">
+		<form id="userCreationForm" action="/users/create/submit">
 			Email: <input type="text" name="email">
 			Password: <input type="password" name="password">
-			<input type="submit" value="Login">
+			<input type="submit" value="Add User">
 		</form>
 		
-		<c:if test="${ error != null }">
-			<div class="alert alert-primary" role="alert">
-  				${ error }
-			</div>
-		</c:if>
-		
-		Or create a new user: <a href="users/create" class="btn btn-primary">Create</a>
 	</body>
 </html>
